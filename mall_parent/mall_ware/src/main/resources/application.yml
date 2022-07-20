@@ -5,7 +5,10 @@ spring:
     url: jdbc:mysql://10.15.0.5:3307/mall_wms?characterEncoding=UTF-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: MALL_PRODUCT
+    name: MALL-WARE
+  cloud:
+    nacos:
+      server-addr: 10.15.0.3:8848
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   global-config:

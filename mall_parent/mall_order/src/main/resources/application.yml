@@ -5,7 +5,10 @@ spring:
     url: jdbc:mysql://10.15.0.5:3307/mall_oms?characterEncoding=UTF-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: MALL_ORDER
+    name: MALL-ORDER
+  cloud:
+    nacos:
+      server-addr: 10.15.0.3:8848
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   global-config:
