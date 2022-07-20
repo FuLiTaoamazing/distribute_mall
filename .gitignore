@@ -1,0 +1,3 @@
+# Project exclude paths
+/mall_parent/mall-member/target/
+/mall_parent/mall_common/target/
