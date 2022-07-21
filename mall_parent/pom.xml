@@ -15,6 +15,7 @@
         <module>mall_order</module>
         <module>mall_product</module>
         <module>mall_ware</module>
+        <module>mall_gateway</module>
     </modules>
     <!--继承父项目-->
     <parent>
@@ -38,7 +39,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <!--springcloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

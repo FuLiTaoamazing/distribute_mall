@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mall_order" />
-        <module name="mall_ware" />
         <module name="mall_coupon" />
         <module name="mall_common" />
-        <module name="mall-member" />
+        <module name="mall_gateway" />
         <module name="mall_product" />
+        <module name="mall_ware" />
+        <module name="mall-member" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
@@ -21,6 +22,7 @@
       <module name="mall-member" options="-parameters" />
       <module name="mall_common" options="-parameters" />
       <module name="mall_coupon" options="-parameters" />
+      <module name="mall_gateway" options="-parameters" />
       <module name="mall_order" options="-parameters" />
       <module name="mall_parent" options="-parameters" />
       <module name="mall_product" options="-parameters" />

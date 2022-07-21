@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: MALL-GATEWAY
+  cloud:
+    nacos:
+      server-addr: 10.15.0.3:8848
+    gateway:
+      routes:
+        - id: test_router
+
+server:
+  port: 88
