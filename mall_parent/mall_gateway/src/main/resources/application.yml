@@ -6,7 +6,21 @@ spring:
       server-addr: 10.15.0.3:8848
     gateway:
       routes:
-        - id: test_router
+        - id: product_router
+          uri: lb://MALL-PRODUCT
+          predicates:
+            - Path= /api/product/**
+          filters:
+            - RewritePath= /api/?(?<segment>.*),/$\{segment}
+        - id: admin_router
+          uri: lb://MALL-ADMIN
+          predicates:
+            - Path= /api/**
+          filters:
+            - RewritePath= /api/?(?<segment>.*),/renren-fast/$\{segment}
+
+
+
 
 server:
   port: 88

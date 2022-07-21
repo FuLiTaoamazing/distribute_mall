@@ -3,7 +3,6 @@ package com.flt.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import com.flt.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,14 +29,15 @@ public class MemberController {
     @Autowired
     private MemberService memberService;
     @Autowired
-    private CouponFeignService couponFeignService;
+    //private CouponFeignService couponFeignService;
 
     @RequestMapping(value = "/coupons")
     public R test() {
         MemberEntity memberEntity = new MemberEntity();
         memberEntity.setNickname("张三");
-        R response = couponFeignService.memberCoupons();
-        return R.ok().put("member", memberEntity).put("coupons", response.get("coupons"));
+        //R response = couponFeignService.memberCoupons();
+        //return R.ok().put("member", memberEntity).put("coupons", response.get("coupons"));
+        return R.ok().put("member", memberEntity);
     }
 
     /**

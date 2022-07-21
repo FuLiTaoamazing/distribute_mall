@@ -16,6 +16,7 @@
         <module>mall_product</module>
         <module>mall_ware</module>
         <module>mall_gateway</module>
+        <module>renren-fast</module>
     </modules>
     <!--继承父项目-->
     <parent>
@@ -51,7 +52,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.2.1.RELEASE</version>
+                <version>${spring.cloud.alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
