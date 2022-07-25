@@ -68,7 +68,12 @@ public class CategoryController {
     @RequestMapping("/update")
     public R update(@RequestBody CategoryEntity category){
 		categoryService.updateById(category);
+        return R.ok();
+    }
 
+    @RequestMapping("/batchUpdate")
+    public R batchUpdate(@RequestBody List<CategoryEntity> categoryEntitys){
+        categoryService.updateBatchById(categoryEntitys);
         return R.ok();
     }
 
