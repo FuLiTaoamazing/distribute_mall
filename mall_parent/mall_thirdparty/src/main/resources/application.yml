@@ -1,0 +1,18 @@
+#阿里云OSS服务的配置
+alibaba:
+  cloud:
+    oss:
+      endpoint: oss-cn-hangzhou.aliyuncs.com
+      bucket: mall-fulitao
+
+    access-key: LTAI5tCa9GjTwNRBVmNRP8VR
+    secret-key: kNTDZ0cJiYxIQ92IBz5Dl1hFETpukr
+
+spring:
+  cloud:
+    nacos:
+      server-addr: 10.15.0.4:8848
+  application:
+    name: MALL-THIRDPARTY
+server:
+  port: 13000

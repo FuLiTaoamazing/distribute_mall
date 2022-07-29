@@ -17,6 +17,7 @@
         <module>mall_ware</module>
         <module>mall_gateway</module>
         <module>renren-fast</module>
+        <module>mall_thirdparty</module>
     </modules>
     <!--继承父项目-->
     <parent>
@@ -27,7 +28,7 @@
     <!--维护依赖-->
     <properties>
         <spring.cloud.version>Hoxton.SR6</spring.cloud.version>
-        <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
+        <spring.cloud.alibaba.version>2.2.8.RELEASE</spring.cloud.alibaba.version>
         <fastjson.version>1.2.15</fastjson.version>
         <httpclient.version>4.5.13</httpclient.version>
         <httpclient.core.version>4.4.1</httpclient.core.version>
@@ -53,6 +54,14 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--阿里云依赖-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>aliyun-spring-boot-dependencies</artifactId>
+                <version>1.0.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

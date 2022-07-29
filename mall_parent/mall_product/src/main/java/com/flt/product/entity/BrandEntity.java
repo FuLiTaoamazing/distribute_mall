@@ -5,7 +5,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.flt.common.exception.ListValues;
 import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * 品牌
@@ -27,6 +32,7 @@ public class BrandEntity implements Serializable {
 	/**
 	 * 品牌名
 	 */
+	@NotBlank(message = "品牌名不能为空")
 	private String name;
 	/**
 	 * 品牌logo地址
@@ -39,6 +45,8 @@ public class BrandEntity implements Serializable {
 	/**
 	 * 显示状态[0-不显示；1-显示]
 	 */
+	//自己编写的自定义注解要求必须出现指定的值
+	@ListValues(values={0,1})
 	private Integer showStatus;
 	/**
 	 * 检索首字母
