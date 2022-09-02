@@ -5,8 +5,8 @@ alibaba:
       endpoint: oss-cn-hangzhou.aliyuncs.com
       bucket: mall-fulitao
 
-    access-key: LTAI5tJmXic8K2PdwpHdPgXp
-    secret-key: lKViEg7RvQsnJd6aDv0YKCES3dih5l
+    access-key: aaa
+    secret-key: bbb
 
 spring:
   cloud:
