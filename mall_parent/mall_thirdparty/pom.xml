@@ -42,6 +42,10 @@
                     <groupId>mysql</groupId>
                     <artifactId>mysql-connector-java</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-redis</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!--对象存储服务-->

@@ -12,6 +12,18 @@ spring:
             - Path= /api/product/**
           filters:
             - RewritePath= /api/?(?<segment>.*),/$\{segment}
+        - id: member_router
+          uri: lb://MALL-MEMBER
+          predicates:
+            - Path= /api/member/**
+          filters:
+            - RewritePath= /api/?(?<segment>.*),/$\{segment}
+        - id: ware_router
+          uri: lb://MALL-WARE
+          predicates:
+            - Path= /api/ware/**
+          filters:
+            - RewritePath= /api/?(?<segment>.*),/$\{segment}
         - id: third_party
           uri: lb://MALL-THIRDPARTY
           predicates:
@@ -24,6 +36,16 @@ spring:
             - Path= /api/**
           filters:
             - RewritePath= /api/?(?<segment>.*),/renren-fast/$\{segment}
+        - id: mall_host_product
+          uri: lb://MALL-PRODUCT
+          predicates:
+            - Host=mall.com
+        - id: mall_host_search
+          uri: lb://MALL-SEARCH
+          predicates:
+            - Host=search.mall.com
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 
 
 

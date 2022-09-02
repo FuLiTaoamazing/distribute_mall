@@ -25,7 +25,7 @@ import com.flt.common.utils.R;
  * @date 2022-07-20 13:41:09
  */
 @RestController
-@RequestMapping("member/wareordertaskdetail")
+@RequestMapping("ware/wareordertaskdetail")
 public class WareOrderTaskDetailController {
     @Autowired
     private WareOrderTaskDetailService wareOrderTaskDetailService;

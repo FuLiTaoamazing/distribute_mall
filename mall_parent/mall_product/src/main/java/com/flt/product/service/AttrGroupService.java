@@ -3,7 +3,9 @@ package com.flt.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.flt.common.utils.PageUtils;
 import com.flt.product.entity.AttrGroupEntity;
+import com.flt.product.vo.AttrGroupWithAttrVO;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,5 +20,7 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     PageUtils queryPage(Map<String, Object> params, Long catelogId);
+
+    List<AttrGroupWithAttrVO> getAttrGroupWithAttr(Long catelogId);
 }
 

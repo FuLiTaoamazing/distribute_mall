@@ -2,17 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mall_order" />
         <module name="mall_coupon" />
+        <module name="mall_thirdparty" />
         <module name="mall_common" />
         <module name="mall_gateway" />
         <module name="mall_product" />
+        <module name="renren-fast" />
         <module name="mall_ware" />
         <module name="mall-member" />
+        <module name="renren-generator" />
+        <module name="mall_search" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
@@ -26,7 +31,11 @@
       <module name="mall_order" options="-parameters" />
       <module name="mall_parent" options="-parameters" />
       <module name="mall_product" options="-parameters" />
+      <module name="mall_search" options="-parameters" />
+      <module name="mall_thirdparty" options="-parameters" />
       <module name="mall_ware" options="-parameters" />
+      <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
     </option>
   </component>
 </project>

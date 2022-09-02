@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.15.0.4:8848
+  application:
+    name: MALL-SEARCH
+  thymeleaf:
+    cache: false
+server:
+  port: 14000

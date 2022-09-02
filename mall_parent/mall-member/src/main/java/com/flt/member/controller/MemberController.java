@@ -31,14 +31,6 @@ public class MemberController {
     @Autowired
     //private CouponFeignService couponFeignService;
 
-    @RequestMapping(value = "/coupons")
-    public R test() {
-        MemberEntity memberEntity = new MemberEntity();
-        memberEntity.setNickname("张三");
-        //R response = couponFeignService.memberCoupons();
-        //return R.ok().put("member", memberEntity).put("coupons", response.get("coupons"));
-        return R.ok().put("member", memberEntity);
-    }
 
     /**
      * 列表

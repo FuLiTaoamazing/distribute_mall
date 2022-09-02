@@ -25,7 +25,7 @@ import com.flt.common.utils.R;
  * @date 2022-07-20 13:41:09
  */
 @RestController
-@RequestMapping("member/wareinfo")
+@RequestMapping("ware/wareinfo")
 public class WareInfoController {
     @Autowired
     private WareInfoService wareInfoService;
@@ -35,7 +35,7 @@ public class WareInfoController {
      */
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = wareInfoService.queryPage(params);
+        PageUtils page = wareInfoService.queryPageByCondition(params);
 
         return R.ok().put("page", page);
     }

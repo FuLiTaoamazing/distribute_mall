@@ -18,6 +18,8 @@
         <module>mall_gateway</module>
         <module>renren-fast</module>
         <module>mall_thirdparty</module>
+        <module>renren-generator</module>
+        <module>mall_search</module>
     </modules>
     <!--继承父项目-->
     <parent>
@@ -36,6 +38,9 @@
         <mysql.conenction.version>8.0.17</mysql.conenction.version>
         <myabtis.plus.version>3.2.0</myabtis.plus.version>
         <lombok.version>1.18.8</lombok.version>
+        <elasticsearch.version>7.4.2</elasticsearch.version>
+        <org.elasticsearch.client.version>7.4.2</org.elasticsearch.client.version>
+        <redisson.version>3.17.6</redisson.version>
     </properties>
 
 
@@ -103,6 +108,16 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${org.elasticsearch.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

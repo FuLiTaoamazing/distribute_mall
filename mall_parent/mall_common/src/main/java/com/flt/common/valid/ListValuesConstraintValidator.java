@@ -1,6 +1,6 @@
 package com.flt.common.valid;
 
-import com.flt.common.exception.ListValues;
+import com.flt.common.annotation.ListValues;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

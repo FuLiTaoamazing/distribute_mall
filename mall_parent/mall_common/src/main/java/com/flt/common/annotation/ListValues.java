@@ -1,4 +1,4 @@
-package com.flt.common.exception;
+package com.flt.common.annotation;
 
 import com.flt.common.valid.ListValuesConstraintValidator;
 
@@ -19,7 +19,7 @@ import java.lang.annotation.*;
 public @interface ListValues {
     //这里的默认properties是JRS303规范中提供的我们可以自定义个自己的properties
     //系统默认的这个消息文件的全程名尾 ValidationMessages.properties
-    String message() default "{com.flt.common.exception.ListValues.message}";
+    String message() default "{com.flt.common.annotation.ListValues.message}";
 
     Class<?>[] groups() default {};
 

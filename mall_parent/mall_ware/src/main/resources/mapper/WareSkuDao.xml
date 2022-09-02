@@ -3,7 +3,7 @@
 
 <mapper namespace="com.flt.ware.dao.WareSkuDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
+    <!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="com.flt.ware.entity.WareSkuEntity" id="wareSkuMap">
         <result property="id" column="id"/>
         <result property="skuId" column="sku_id"/>
@@ -12,6 +12,17 @@
         <result property="skuName" column="sku_name"/>
         <result property="stockLocked" column="stock_locked"/>
     </resultMap>
+    <update id="addStock">
+        UPDATE wms_ware_sku
+        SET STOCK=#{stock}
+        WHERE SKU_ID = #{skuId}
+          AND WARE_ID = #{wareId}
+    </update>
+    <select id="getSkuStock" resultType="java.lang.Long">
+        SELECT SUM(STOCK - STOCK_LOCKED)
+        FROM WMS_WARE_SKU
+        WHERE SKU_ID = #{skuId}
+    </select>
 
 
 </mapper>

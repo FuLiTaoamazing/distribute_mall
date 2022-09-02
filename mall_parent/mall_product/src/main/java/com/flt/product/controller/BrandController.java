@@ -67,14 +67,14 @@ public class BrandController {
     @RequestMapping("/update")
     public R update(@RequestBody BrandEntity brand) {
 
-        brandService.updateById(brand);
+        brandService.updateDetails(brand);
         return R.ok();
     }
 
     /**
      * 删除
      */
-    @RequestMapping("/delete")
+    @RequestMapping("/delete") 
     public R delete(@RequestBody Long[] brandIds) {
         brandService.removeByIds(Arrays.asList(brandIds));
 
