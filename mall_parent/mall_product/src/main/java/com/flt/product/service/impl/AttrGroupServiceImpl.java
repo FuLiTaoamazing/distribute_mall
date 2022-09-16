@@ -1,14 +1,16 @@
 package com.flt.product.service.impl;
 
-import com.flt.product.dao.AttrDao;
 import com.flt.product.entity.AttrEntity;
 import com.flt.product.service.AttrService;
 import com.flt.product.vo.AttrGroupWithAttrVO;
+import com.flt.product.vo.SkuItemVO;
+import com.flt.product.vo.SpuItemBaseAttrVO;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -70,6 +72,14 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
             return vo;
         }).collect(Collectors.toList());
         return vos;
+    }
+
+    @Override
+    public List<SpuItemBaseAttrVO> getAttrGroupWithAttrsBySpuId(Long spuId, Long catelogId) {
+        List<SpuItemBaseAttrVO> result =  this.baseMapper.getAttrGroupWithAttrsBySpuId(spuId, catelogId);
+
+        return result;
+
     }
 
 

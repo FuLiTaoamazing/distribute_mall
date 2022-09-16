@@ -28,3 +28,10 @@ logging:
     com.flt.product.dao: error
 server:
   port: 10000
+mall:
+  thread:
+    keep-alive-time: 10
+    max-size: 200
+    poll-size: 20
+
+

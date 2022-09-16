@@ -3,7 +3,9 @@ package com.flt.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.flt.common.utils.PageUtils;
 import com.flt.product.entity.SkuSaleAttrValueEntity;
+import com.flt.product.vo.SkuItemSaleAttrVO;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +18,7 @@ import java.util.Map;
 public interface SkuSaleAttrValueService extends IService<SkuSaleAttrValueEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    List<SkuItemSaleAttrVO> getSaleAttrsBySpuId(Long spuId);
 }
 

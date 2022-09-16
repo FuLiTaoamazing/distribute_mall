@@ -8,8 +8,10 @@ import com.flt.common.utils.Query;
 import com.flt.product.dao.SkuSaleAttrValueDao;
 import com.flt.product.entity.SkuSaleAttrValueEntity;
 import com.flt.product.service.SkuSaleAttrValueService;
+import com.flt.product.vo.SkuItemSaleAttrVO;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 @Service("skuSaleAttrValueService")
@@ -23,6 +25,13 @@ public class SkuSaleAttrValueServiceImpl extends ServiceImpl<SkuSaleAttrValueDao
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public List<SkuItemSaleAttrVO> getSaleAttrsBySpuId(Long spuId) {
+        SkuSaleAttrValueDao dao = this.baseMapper;
+        return         dao.getSaleAttrsBySpuId(spuId);
+
     }
 
 }

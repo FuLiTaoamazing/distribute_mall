@@ -4,9 +4,13 @@ alibaba:
     oss:
       endpoint: oss-cn-hangzhou.aliyuncs.com
       bucket: mall-fulitao
-
     access-key: aaa
     secret-key: bbb
+    sms:
+      host: https://gyytz.market.alicloudapi.com
+      path: /sms/smsSend
+      method: POST
+      appcode: 2011bec1d5354821a58b10992225d752
 
 spring:
   cloud:

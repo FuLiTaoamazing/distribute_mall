@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: MALL-AUTH
+  cloud:
+    nacos:
+      server-addr: 10.15.0.4:8848
+  thymeleaf:
+    cache: false
+  redis:
+    host: 10.15.0.3
+    port: 6379
+server:
+  port: 20000

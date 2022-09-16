@@ -39,11 +39,15 @@ spring:
         - id: mall_host_product
           uri: lb://MALL-PRODUCT
           predicates:
-            - Host=mall.com
+            - Host=mall.com,item.mall.com
         - id: mall_host_search
           uri: lb://MALL-SEARCH
           predicates:
             - Host=search.mall.com
+        - id: mall_host_auth
+          uri: lb://MALL-AUTH
+          predicates:
+            - Host=auth.mall.com
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
 
